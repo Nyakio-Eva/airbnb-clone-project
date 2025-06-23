@@ -87,3 +87,36 @@
 - Guests can leave ratings and written reviews for properties they've stayed in using endpoints like /reviews/. This feature builds trust and transparency, helping future users make informed decisions and giving hosts valuable feedback.
 #### 7. Database Optimization
 - To ensure smooth performance at scale, this feature introduces indexing for faster queries and caching mechanisms to minimize repetitive database access. These optimizations contribute significantly to speed, scalability, and user experience, especially under high traffic.
+
+## API Security 
+#### 1. Authentication
+- Verifies the identity of users before granting access, via JWT tokens or session-based logins.
+- This ensures that only the registered users can access sensitive actions like boking a property, viewing their profile, or making payments.
+#### 2. Authorization
+- Controls what an authenticated user is allowed to do. e.g a guest can't edit another user's booking.
+- It prevents privelege escalation and data leaks.
+#### 3. Rate limiting
+- Limits the number of requests a user or bot can make to the API within a certain timeframe.
+- It protects against denial of service (DoS) attacks and brute-force login attempts.
+#### 4. Data Validation
+- Ensures that user input is properly checked and cleaned before being processed or stored in the database.
+- It prevents SQL injection, Cross-site scripting(xss) and other input-based attacks.
+#### 5. HTTPS and Secure Communication
+- Uses SSL/TLS encryption to protect all data transmitted between clients and the server.
+- prevents man-in-the-middle attacks, keeping user credentials, payment info, and personal data safe from interception.
+#### 6. Secure Payment Handling
+- Uses a trusted third-party payment processor e.g paypal, Stripe, Mpesa rather than handling card details directly.
+- It protects both the platform and it's users from credit card fraud and regulatory risks
+#### 7. Password Hashing
+- Stores user passwords as hashed, not plain text using algorithms like bcrypt or Argon2
+- Even if the database is compromised, hashed passwords are hard to reverse.
+#### 8. CORS
+- Controls which frontend dormains can acces backend resources
+- Prevents malicious websites from making unauthorized requests to tje backend on behalf of a logged in user(CSRF-like behavior)
+#### 9. Logging and monitoring
+  - Tracks critical actions and security events such as failed logins, data access attaempts and paymen failures.
+  - Helps in detecting suspicious activity early and aids in incdent response if a breach occurs.
+#### 10. Role-Based Access Control
+- Assigns specific permissions based on user roles e.g guest, host, admin
+- Helps enforce boundaries and restricts access to sensitive admin features or user data.
+  
