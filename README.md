@@ -71,4 +71,19 @@
 #### 5. Reviews
 - A user can write one review per property
 - A property can have many reviews
-  
+
+ ## Feature Breakdown
+ #### 1. API Documentation
+ - Ensures  that the backend APIs are well-documented using the OpenAPI standard, making them easy to understand, use, and test.With both Django REST framework and GraohQL, the system offers flexibility for standard CRUD operations and GrapHQL for optimized, custom data queries.
+#### 2. User Management
+- Allows users to register, login and manage their profiles via endpoints like /users/ and /users/{user_id}. It provides a secure foundation for tracking user-specific actions like bookings, payments and reviews, while enabling role-based access e.g guest vs host
+#### 3. Property management
+- Through endpoints like /properties/, users (typically hosts) can create, edit, view, or delete property listings. This is the core feature that populates the app’s marketplace, allowing users to browse available places to stay and enabling hosts to manage their offerings.
+#### 4. Booking System
+- The booking system allows guests to book, update, or cancel reservations through endpoints like /bookings/. It handles check-in/check-out dates, availability validation, and links to both user and property data—forming the transactional heart of the application.
+#### 5. Payment processing
+- This feature manages the payment workflow, ensuring that guests can securely pay for bookings through the /payments/ endpoint. It handles transactions, links them to specific bookings, and may support future extensions like refunds or payment history.
+#### 6. Review System
+- Guests can leave ratings and written reviews for properties they've stayed in using endpoints like /reviews/. This feature builds trust and transparency, helping future users make informed decisions and giving hosts valuable feedback.
+#### 7. Database Optimization
+- To ensure smooth performance at scale, this feature introduces indexing for faster queries and caching mechanisms to minimize repetitive database access. These optimizations contribute significantly to speed, scalability, and user experience, especially under high traffic.
