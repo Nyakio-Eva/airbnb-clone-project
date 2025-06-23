@@ -114,9 +114,23 @@
 - Controls which frontend dormains can acces backend resources
 - Prevents malicious websites from making unauthorized requests to tje backend on behalf of a logged in user(CSRF-like behavior)
 #### 9. Logging and monitoring
-  - Tracks critical actions and security events such as failed logins, data access attaempts and paymen failures.
-  - Helps in detecting suspicious activity early and aids in incdent response if a breach occurs.
+- Tracks critical actions and security events such as failed logins, data access attaempts and paymen failures.
+- Helps in detecting suspicious activity early and aids in incdent response if a breach occurs.
 #### 10. Role-Based Access Control
 - Assigns specific permissions based on user roles e.g guest, host, admin
 - Helps enforce boundaries and restricts access to sensitive admin features or user data.
-  
+
+## CI/CD Pipeline
+- Stands for Continuous Intergration and Continuos Deployment.
+- It's a devops practice that automates the process of building, testing and deploying code everytime a change is made
+- CI/CD is important for the airbnb clone project because of:
+   * Faster Development Cycles – Code changes are integrated and deployed quickly, reducing bottlenecks.
+   * Higher Code Quality – Automated tests run with every push, catching bugs early before they hit production.
+   * Consistent Deployments – Reduces human error by automating repeatable deployment steps.
+   * Better Team Collaboration – Multiple developers can safely push code without breaking the project.
+- Common tools for CI/CD:
+   * Github Actions: automates tests and deployments on every push or pull requests.
+   * Docker: Packages the app into consistent containers for reliable builds and deployment.
+   * Docker Compose: Runs multi-conainer setups for local and test environments
+   * Heroku/Render/ Railway/AWS/ Azure: cloud platforms where your app can be deployed automatically
+   * PostgreSQL: A production ready database used consistently across all environments
