@@ -1,4 +1,4 @@
-# air-bnb-clone-project
+# airbnb-clone-project
 ## Team Roles
 #### 1. Backend Developer
 - Role: Builds and maintains the server-side logic, APIs, and business logic that powers the application.
