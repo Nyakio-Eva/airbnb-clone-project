@@ -42,7 +42,7 @@
     * Assign tasks and track progress using tools like Trello or Jira.
     * Communicate with stakeholders and manage documentation.
     * Remove blockers for the dev team.
-## Technology
+## Technology Stack
 - Django: A high-level Python web framework used for building a RESTful API.
 - Django REST Framework: Provides tools for creating and managing RESTful APIs.
 - PostgreSQL: A powerful relational database used for data storage.
